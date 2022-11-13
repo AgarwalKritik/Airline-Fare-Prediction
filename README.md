@@ -1,4 +1,4 @@
-# Flight Fare Prediction:
+# Airline Fare Prediction:
 
 ## Softwares and Tools Requirements
 
@@ -6,6 +6,7 @@
 2. [VS Code IDE](https://code.visualstudio.com/)
 3. [Github Account](https://github.com)
 4. [Git Cli](https://cli.github.com/)
+5. [Railway](https://railway.app/)
 
 ## Classification Algorithms used:
 
