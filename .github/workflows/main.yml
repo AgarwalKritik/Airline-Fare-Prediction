@@ -1,0 +1,29 @@
+# Your workflow name.
+name: Deploy
+
+# Run workflow on every push to main branch.
+on:
+  push:
+    branches: [main]
+
+# Your workflows jobs.
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      # Check-out your repository.
+      - name: Checkout
+        uses: actions/checkout@v2
+
+### ⬇ IMPORTANT PART ⬇ ###
+
+      - name: Build, Push and Release a Docker container. Deploy to Railway. # Your custom step name
+      # uses: devtomio/action-railway@b7bad8e07bcb36d2a21f90f2ee6b2510125a6948
+        uses: devtomio/action-railway@v1.1.4 # GitHub action name (leave it as it is).
+        with:
+          # Below you must provide variables for your Railway app.
+          # The Railway Token
+          # Token is available under your Railway account settings.
+          railway_token: #${{ secrets.RAILWAY_TOKEN }} #optional     
+          
+### ⬆ IMPORTANT PART ⬆ ###

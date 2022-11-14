@@ -1,4 +1,6 @@
-# Airline Fare Prediction:
+# Airline Fare Prediction
+
+[![Deploy on Railway](https://railway.app/button.svg)](https://railway.app/new/template/oDxri6?referralCode=V8Xfpl)
 
 ## Softwares and Tools Requirements
 
@@ -8,13 +10,13 @@
 4. [Git Cli](https://cli.github.com/)
 5. [Railway](https://railway.app/)
 
-## Classification Algorithms used:
+## Classification Algorithms used
 
 1. LinearRegression, Ridge, Lasso
 2. KNeighborsRegressor
 3. DecisionTreeRegressor
 4. RandomForestRegressor
 
-##  Hyperparameter tunning:
+## Hyperparameter tunning
 
 * GridSearchCV
