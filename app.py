@@ -21,9 +21,8 @@ total_stop_dict = {'non-stop': 0, '1 stop': 1,
 Additional_Info_dict = {'No info': 7, 'In-flight meal not included': 5, 'No check-in baggage included': 6, '1 Long layover': 0,
                         'Change airports': 4, 'Business class': 3, '1 Short layover': 2, 'Red-eye flight': 1, '2 Long layover': 8}
 
+
 # Load the model
-
-
 @app.route('/')
 def home():
     return render_template('home.html')
