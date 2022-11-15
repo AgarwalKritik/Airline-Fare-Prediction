@@ -8,154 +8,176 @@
   <link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
   <link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
   <link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
-
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    .footer {
+      position: fixed;
+      left: 0;
+      bottom: 0;
+      height: fit-content;
+      width: 100%;
+      color: rgb(0, 0, 0);
+      text-align: center;
+    }
+  </style>
 
 </head>
 
 <body style="background-color:#e4e5e6;">
   <div class="login">
-    <img src="https://raw.githubusercontent.com/Kritik007/Flight-Fare-Prediction/main/templates/SOET.png"
-      style="width:240px;height:150x;">
-    <h3 style="background-color: darkturquoise;">Machine Learning Final Project</h3>
-    <h2 style="background-color:lightgreen">Airline Fare Prediction using Regression</h2>
+    <center>
+      <a href="https://cmr.edu.in"><img
+          src="https://raw.githubusercontent.com/Kritik007/Flight-Fare-Prediction/main/templates/SOET.png"
+          style="width:240px;height:150x;"></a>
+      <h3>Machine Learning Final Project - Academic Year 2022-23</h3>
+      <h2 style="background-color:lightgreen">Airline Fare Prediction using Regression</h2>
 
-    <!-- Main Input For Receiving Query to our ML -->
-    <table>
-      <form action="{{ url_for('predict_api')}}" method="post">
+      <!-- Main Input For Receiving Query to our ML -->
+      <table>
+        <form action="{{ url_for('predict_api')}}" method="post">
 
-        <tr>
-          <td>
-            <label style="font-weight: bold;">
-              Departure Date & Time:
-            </label>
-          </td>
-          <td><input type="datetime-local" name="Departure Date & Time" placeholder="Departure Date & Time"
-              required="required" /><br>
-          </td>
-        </tr>
+          <tr>
+            <td>
+              <label style="font-weight: bold;">
+                Departure Date & Time:
+              </label>
+            </td>
+            <td><input type="datetime-local" name="Departure Date & Time" placeholder="Departure Date & Time"
+                required="required" /><br>
+            </td>
+          </tr>
 
-        <tr>
-          <td>
-            <label style="font-weight: bold;">
-              Arrival Time:
-            </label>
-          </td>
-          <td><input type="time" name="Arrival Time" placeholder="Arrival Time" required="required" /><br>
-          </td>
-        </tr>
+          <tr>
+            <td>
+              <label style="font-weight: bold;">
+                Arrival Time:
+              </label>
+            </td>
+            <td><input type="time" name="Arrival Time" placeholder="Arrival Time" required="required" /><br>
+            </td>
+          </tr>
 
-        <tr>
-          <td>
-            <label style="font-weight: bold;">
-              Airline:
-            </label>
-          </td>
-          <td><select id="Airline" name="Airline" placeholder="Airline">
-              <option value="Air India">Air India</option>
-              <option value="IndiGo">IndiGo</option>
-              <option value="SpiceJet">SpiceJet</option>
-              <option value="Vistara">Vistara</option>
-              <option value="Air Asia">Air Asia</option>
-              <option value="GoAir">GoAir</option>
-              <option value="Multiple carriers Premium economy">Multiple carriers Premium economy</option>
-              <option value="Jet Airways">Jet Airways</option>
-              <option value="Vistara Premium economy">Vistara Premium economy</option>
-              <option value="Trujet">Trujet</option>
-            </select> <br>
-          </td>
-        </tr>
+          <tr>
+            <td>
+              <label style="font-weight: bold;">
+                Airline:
+              </label>
+            </td>
+            <td><select id="Airline" name="Airline" placeholder="Airline">
+                <option value="Air India">Air India</option>
+                <option value="IndiGo">IndiGo</option>
+                <option value="SpiceJet">SpiceJet</option>
+                <option value="Vistara">Vistara</option>
+                <option value="Air Asia">Air Asia</option>
+                <option value="GoAir">GoAir</option>
+                <option value="Multiple carriers Premium economy">Multiple carriers Premium economy</option>
+                <option value="Jet Airways">Jet Airways</option>
+                <option value="Vistara Premium economy">Vistara Premium economy</option>
+                <option value="Trujet">Trujet</option>
+              </select> <br>
+            </td>
+          </tr>
 
-        <tr>
-          <td>
-            <label style="font-weight: bold;">
-              Source:
-            </label>
-          </td>
-          <td><select id="Source" name="Source" placeholder="Source">
-              <option value="Banglore">Banglore</option>
-              <option value="Kolkata">Kolkata</option>
-              <option value="Delhi">Delhi</option>
-              <option value="Chennai">Chennai</option>
-              <option value="Mumbai">Mumbai</option>
-              <option value="Cochin">Cochin</option>
-              <option value="Hyderabad">Hyderabad</option>
-            </select> <br>
-          </td>
-        </tr>
+          <tr>
+            <td>
+              <label style="font-weight: bold;">
+                Source:
+              </label>
+            </td>
+            <td><select id="Source" name="Source" placeholder="Source">
+                <option value="Banglore">Banglore</option>
+                <option value="Kolkata">Kolkata</option>
+                <option value="Delhi">Delhi</option>
+                <option value="Chennai">Chennai</option>
+                <option value="Mumbai">Mumbai</option>
+                <option value="Cochin">Cochin</option>
+                <option value="Hyderabad">Hyderabad</option>
+              </select> <br>
+            </td>
+          </tr>
 
-        <tr>
-          <td>
-            <label style="font-weight: bold;">
-              Destination:
-            </label>
-          </td>
-          <td><select id="Destination" name="Destination" placeholder="Destination">
-              <option value="Banglore">Banglore</option>
-              <option value="Kolkata">Kolkata</option>
-              <option value="Delhi">Delhi</option>
-              <option value="Chennai">Chennai</option>
-              <option value="Mumbai">Mumbai</option>
-              <option value="Cochin">Cochin</option>
-              <option value="Hyderabad">Hyderabad</option>
-            </select> <br>
-          </td>
-        </tr>
+          <tr>
+            <td>
+              <label style="font-weight: bold;">
+                Destination:
+              </label>
+            </td>
+            <td><select id="Destination" name="Destination" placeholder="Destination">
+                <option value="Banglore">Banglore</option>
+                <option value="Kolkata">Kolkata</option>
+                <option value="Delhi">Delhi</option>
+                <option value="Chennai">Chennai</option>
+                <option value="Mumbai">Mumbai</option>
+                <option value="Cochin">Cochin</option>
+                <option value="Hyderabad">Hyderabad</option>
+              </select> <br>
+            </td>
+          </tr>
 
-        <tr>
-          <td>
-            <label style="font-weight: bold;">
-              Total_Stops:
-            </label>
-          </td>
-          <td><select id="Total_Stops" name="Total_Stops" placeholder="Total_Stops">
-              <option value="non-stop">non-stop</option>
-              <option value="1 stop">1 stop</option>
-              <option value="2 stops">2 stops</option>
-              <option value="3 stops">3 stops</option>
-              <option value="4 stops">4 stops</option>
-            </select> <br>
-          </td>
-        </tr>
+          <tr>
+            <td>
+              <label style="font-weight: bold;">
+                Total_Stops:
+              </label>
+            </td>
+            <td><select id="Total_Stops" name="Total_Stops" placeholder="Total_Stops">
+                <option value="non-stop">non-stop</option>
+                <option value="1 stop">1 stop</option>
+                <option value="2 stops">2 stops</option>
+                <option value="3 stops">3 stops</option>
+                <option value="4 stops">4 stops</option>
+              </select> <br>
+            </td>
+          </tr>
 
-        <tr>
-          <td>
-            <label style="font-weight: bold;">
-              Additional_Info:
-            </label>
-          </td>
-          <td><select id="Additional_Info" name="Additional_Info" placeholder="Additional_Info">
-              <option value="No info">No info</option>
-              <option value="Business class">Business class</option>
-              <option value="In-flight meal not included">In-flight meal not included</option>
-              <option value="No check-in baggage included">No check-in baggage included</option>
-              <option value="1 Long layover">1 Long layover</option>
-              <option value="2 Long layover">2 Long layover</option>
-              <option value="1 Short layover">1 Short layover</option>
-              <option value="Change airports">Change airports</option>
-              <option value="Red-eye flight">Red-eye flight</option>
-            </select> <br>
-          </td>
-        </tr>
+          <tr>
+            <td>
+              <label style="font-weight: bold;">
+                Additional_Info:
+              </label>
+            </td>
+            <td><select id="Additional_Info" name="Additional_Info" placeholder="Additional_Info">
+                <option value="No info">No info</option>
+                <option value="Business class">Business class</option>
+                <option value="In-flight meal not included">In-flight meal not included</option>
+                <option value="No check-in baggage included">No check-in baggage included</option>
+                <option value="1 Long layover">1 Long layover</option>
+                <option value="2 Long layover">2 Long layover</option>
+                <option value="1 Short layover">1 Short layover</option>
+                <option value="Change airports">Change airports</option>
+                <option value="Red-eye flight">Red-eye flight</option>
+              </select> <br>
+            </td>
+          </tr>
 
-    </table>
+      </table>
 
-    <br><br>
+      <br><br>
 
-    <button style="font-weight: bold;" type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
+      <button style="font-weight: bold;" type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
+    </center>
     </form>
 
     <br>
     <br>
 
   </div>
-  {{output_text}}
-
+  <center>
+    <h3> {{output_text}} </h3>
+  </center>
   <br>
   <br>
 
-
-  <h5>Developed By - <a href="https://kritik.go.studio/" target="_blank">KRITIK AGARWAL</a> (19BBTCS067) & <a
-      href="https://www.linkedin.com/in/kalpanasahu" target="_blank">KALPANA SAHU</a> (19BBTCS064)</h5>
+  <div class="footer">
+    <h5>Developed By - <a href="https://kritik.go.studio/" target="_blank">KRITIK AGARWAL
+        (19BBTCS067)</a> & <a href="https://www.linkedin.com/in/kalpanasahu" target="_blank">KALPANA SAHU
+        (19BBTCS064)</a> </h5>
+    <h5>
+      &copy; 2022 <a href="https://github.com/Kritik007/Airline-Fare-Prediction" target="_blank">KRITIK AGARWAL</a>
+    </h5>
+  </div>
+  <br>
+  <br>
 </body>
 
 </html>
