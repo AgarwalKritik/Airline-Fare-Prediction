@@ -76,7 +76,7 @@ def predict_api():
     output = flight_model.predict(final_input)[0]
     print(output)
 
-    return render_template('home.html', output_text="The Price of the flight journey is {}.".format(round(output, 2)))
+    return render_template('home.html', output_text="The Price of the flight journey is ₹ {}/-".format(round(output, 2)))
 
 
 if __name__ == '__main__':
