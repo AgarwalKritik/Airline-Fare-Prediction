@@ -1,5 +1,5 @@
 #   Author: KRITIK AGARWAL (https://github.com/Kritik007)
-#   [Copyright (c) 2022 Kritik Agarwal](https://github.com/Kritik007/Airline-Fare-Prediction/blob/9cab385886c0ef950b3009e265d6ae2428885d54/LICENSE#L3)
+#   [Copyright (c) 2022 Kritik Agarwal](https://github.com/Kritik007/Airline-Fare-Prediction/blob/8ce82e4fec395c4acfc942d18471b7fe89b6bf8d/LICENSE#L3)
 
 import datetime as dt
 import pickle
