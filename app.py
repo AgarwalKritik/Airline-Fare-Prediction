@@ -1,10 +1,15 @@
+#   Author: KRITIK AGARWAL (https://github.com/Kritik007)
+#   [Copyright (c) 2022 Kritik Agarwal](https://github.com/Kritik007/Airline-Fare-Prediction/blob/9cab385886c0ef950b3009e265d6ae2428885d54/LICENSE#L3)
+
 import datetime as dt
 import pickle
-from flask import Flask, request, jsonify, url_for, render_template
 import numpy as np
 import pandas as pd
+from flask import Flask, jsonify, render_template, request, url_for
 
 app = Flask(__name__)
+
+today = dt.datetime.now()
 
 flight_model = pickle.load(open("FlightPrice.pkl", "rb"))
 
