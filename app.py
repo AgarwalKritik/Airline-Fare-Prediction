@@ -9,8 +9,6 @@ from flask import Flask, jsonify, render_template, request, url_for
 
 app = Flask(__name__)
 
-today = dt.datetime.now()
-
 flight_model = pickle.load(open("FlightPrice.pkl", "rb"))
 
 airline_dict = {'Jet Airways': 4, 'IndiGo': 3, 'Air India': 1, 'Multiple carriers': 6, 'SpiceJet': 8,
