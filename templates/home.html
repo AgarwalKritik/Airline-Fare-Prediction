@@ -1,3 +1,8 @@
+<!-- 
+  Author: KRITIK AGARWAL (https://github.com/Kritik007) 
+  Copyright (c) 2022 Kritik Agarwal (https://github.com/Kritik007/Airline-Fare-Prediction/blob/9cab385886c0ef950b3009e265d6ae2428885d54/LICENSE#L3)
+-->
+
 <!DOCTYPE html>
 <html>
 
@@ -9,6 +14,7 @@
   <link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
   <link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!--Styling Links-->
   <style>
     a:link {
       color: rgb(210, 255, 210);
@@ -44,13 +50,20 @@
       text-align: center;
     }
   </style>
-
+  <!--JavaScript Code to Disable Past Date & Time from datetime-local-->
+  <script type="text/javascript">
+    window.onload = function () {
+      var today = new Date().toISOString().slice(0, 16);
+      document.getElementsByName("Departure Date & Time")[0].min = today;
+    }
+  </script>
 </head>
 
 <body
   style="background-color:#e4e5e6; background-image: url('https://raw.githubusercontent.com/Kritik007/Flight-Fare-Prediction/main/templates/aviation.jpg'); background-repeat: no-repeat; background-attachment: fixed; background-size: cover; background-position: center;">
   <div class="login">
     <center>
+      <!-- COLLEGE LOGO -->
       <a href="https://cmr.edu.in"><img
           src="https://raw.githubusercontent.com/Kritik007/Flight-Fare-Prediction/main/templates/SOET.png"
           style="width:240px;height:150x;"></a>
@@ -188,7 +201,7 @@
 
   </div>
   <center>
-    <h3 style="background-color:#0080cb; color: aliceblue;"> {{output_text}} </h3>
+    <h3 style="background-color:#0080cb; color: aliceblue;"> {{ output_text }} </h3>
   </center>
   <br>
   <br>
