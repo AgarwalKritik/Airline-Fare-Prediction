@@ -80,7 +80,9 @@
                 Departure Date & Time:
               </label>
             </td>
-            <td><input type="datetime-local" name="Departure Date & Time" placeholder="Departure Date & Time"
+            <td>
+              <!-- Input Departure Date & Time -->
+              <input type="datetime-local" name="Departure Date & Time" placeholder="Departure Date & Time"
                 required="required" /><br>
             </td>
           </tr>
@@ -91,7 +93,9 @@
                 Arrival Time:
               </label>
             </td>
-            <td><input type="time" name="Arrival Time" placeholder="Arrival Time" required="required" /><br>
+            <td>
+              <!-- Input Arrival Time -->
+              <input type="time" name="Arrival Time" placeholder="Arrival Time" required="required" /><br>
             </td>
           </tr>
 
@@ -101,7 +105,9 @@
                 Airline:
               </label>
             </td>
-            <td><select id="Airline" name="Airline" placeholder="Airline">
+            <td>
+              <!-- Select Choice of Airline -->
+              <select id="Airline" name="Airline" placeholder="Airline">
                 <option value="Air India">Air India</option>
                 <option value="IndiGo">IndiGo</option>
                 <option value="SpiceJet">SpiceJet</option>
@@ -122,7 +128,9 @@
                 Source:
               </label>
             </td>
-            <td><select id="Source" name="Source" placeholder="Source">
+            <td>
+              <!-- Select Source from where the flight will take off -->
+              <select id="Source" name="Source" placeholder="Source">
                 <option value="Banglore">Banglore</option>
                 <option value="Kolkata">Kolkata</option>
                 <option value="Delhi">Delhi</option>
@@ -140,7 +148,9 @@
                 Destination:
               </label>
             </td>
-            <td><select id="Destination" name="Destination" placeholder="Destination">
+            <td>
+              <!-- Select Destination to where the flight will arrive -->
+              <select id="Destination" name="Destination" placeholder="Destination">
                 <option value="Banglore">Banglore</option>
                 <option value="Kolkata">Kolkata</option>
                 <option value="Delhi">Delhi</option>
@@ -158,7 +168,9 @@
                 Total_Stops:
               </label>
             </td>
-            <td><select id="Total_Stops" name="Total_Stops" placeholder="Total_Stops">
+            <td>
+              <!-- Select Number of Stops -->
+              <select id="Total_Stops" name="Total_Stops" placeholder="Total_Stops">
                 <option value="non-stop">non-stop</option>
                 <option value="1 stop">1 stop</option>
                 <option value="2 stops">2 stops</option>
@@ -174,7 +186,9 @@
                 Additional_Info:
               </label>
             </td>
-            <td><select id="Additional_Info" name="Additional_Info" placeholder="Additional_Info">
+            <td>
+              <!-- Select Any Additional Informations -->
+              <select id="Additional_Info" name="Additional_Info" placeholder="Additional_Info">
                 <option value="No info">No info</option>
                 <option value="Business class">Business class</option>
                 <option value="In-flight meal not included">In-flight meal not included</option>
@@ -191,7 +205,7 @@
       </table>
 
       <br><br>
-
+      <!-- Predict Button to find out the price -->
       <button style="font-weight: bold;" type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
     </center>
     </form>
@@ -201,12 +215,14 @@
 
   </div>
   <center>
+    <!-- Print output after fetching from app.py -->
     <h3 style="background-color:#0080cb; color: aliceblue;"> {{ output_text }} </h3>
   </center>
   <br>
   <br>
 
   <div class="footer">
+    <!-- Credits/Footer -->
     <h5 style="background-color:#0080cb;">Developed By - <a href="https://kritik.go.studio/" target="_blank">KRITIK
         AGARWAL
         (19BBTCS067)</a> & <a href="https://www.linkedin.com/in/kalpanasahu" target="_blank">KALPANA SAHU
