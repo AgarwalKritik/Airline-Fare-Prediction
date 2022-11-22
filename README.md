@@ -1,21 +1,31 @@
 # Airline Fare Prediction
 
+This repository consists of files required for end to end implementation and deployment of Machine Learning Airline Fare Prediction web application created with Flask and deployed on the Railway platform.
+
 [![Deploy on Railway](https://railway.app/button.svg)](https://railway.app/new/template/oDxri6?referralCode=V8Xfpl)
 
 ## Softwares and Tools Requirements
 
-1. [Jupyter Notebook](https://jupyter.org/)
-2. [VS Code IDE](https://code.visualstudio.com/)
-3. [Github Account](https://github.com)
-4. [Git Cli](https://cli.github.com/)
-5. [Railway](https://railway.app/)
+* [Jupyter Notebook](https://jupyter.org/)
+* [VS Code IDE](https://code.visualstudio.com/)
+* [Github Account](https://github.com)
+* [Git Cli](https://cli.github.com/)
+* [Railway](https://railway.app/)
+
+## Codes and Resources Used
+
+* Python Version: 3.7 or above (I have used python 3.11.0 on localhost and 3.7.1 on Railway host)
+* Packages: Flask, sklearn, pandas, numpy, matplotlib, seaborn, gunicorn, scikit-learn, pickle, datetime
+* For Web Framework Requirements: pip install -r requirements.txt
+* Dataset: <https://www.kaggle.com/nikhilmittal/flight-fare-prediction-mh>
+* Flask Productionization: <https://www.kritikagarwal.live>
 
 ## Classification Algorithms used
 
-1. LinearRegression, Ridge, Lasso
-2. KNeighborsRegressor
-3. DecisionTreeRegressor
-4. RandomForestRegressor
+* Linear Regression, Ridge, Lasso
+* K-Neighbors Regressor
+* Decision Tree Regressor
+* Random Forest Regressor
 
 ## Hyperparameter tunning
 
