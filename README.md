@@ -1,5 +1,7 @@
 # Airline Fare Prediction
 
+This repository consists of files required for end to end implementation and deployment of Machine Learning Airline Fare Prediction web application created with Flask and deployed on the Railway platform.
+
 [![Deploy on Railway](https://railway.app/button.svg)](https://railway.app/new/template/oDxri6?referralCode=V8Xfpl)
 
 ## Softwares and Tools Requirements
