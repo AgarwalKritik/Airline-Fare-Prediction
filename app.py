@@ -9,7 +9,7 @@ from flask import Flask, jsonify, render_template, request, url_for
 
 app = Flask(__name__)
 
-flight_model = pickle.load(open("FlightPrice.pkl", "rb"))
+flight_model = pickle.load(open("AirlinePrice.pkl", "rb"))
 
 airline_dict = {'Jet Airways': 4, 'IndiGo': 3, 'Air India': 1, 'Multiple carriers': 6, 'SpiceJet': 8,
                 'Vistara': 10, 'Air Asia': 0, 'GoAir': 2, 'Multiple carriers Premium economy': 7,
@@ -28,7 +28,7 @@ Additional_Info_dict = {'No info': 7, 'In-flight meal not included': 5, 'No chec
 # Load the model
 @app.route('/')
 def home():
-    return render_template('home.html')
+    return render_template('index.html')
 
 
 @app.route('/predict_api', methods=['POST'])
@@ -79,7 +79,7 @@ def predict_api():
     output = flight_model.predict(final_input)[0]
     print(output)
 
-    return render_template('home.html', output_text="The Price of the flight journey is ₹{}/-".format(round(output, 2)))
+    return render_template('index.html', output_text="The Price of the flight journey is ₹{}/-".format(round(output, 2)))
 
 
 if __name__ == '__main__':
