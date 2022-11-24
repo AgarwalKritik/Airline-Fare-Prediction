@@ -17,7 +17,7 @@ This repository consists of files required for end to end implementation and dep
 * Python Version: 3.7 or above (I have used python 3.11.0 on localhost and 3.7.1 on Railway host)
 * Packages: Flask, sklearn, pandas, numpy, matplotlib, seaborn, gunicorn, scikit-learn, pickle, datetime
 * For Web Framework Requirements: pip install -r requirements.txt
-* Dataset: <https://www.kaggle.com/nikhilmittal/flight-fare-prediction-mh>
+* Dataset: <https://github.com/Kritik007/Airline-Fare-Prediction/blob/main/Airline_Fare_Prediction_Data.xlsx>
 * Flask Productionization: <https://www.kritikagarwal.live>
 
 ## Classification Algorithms used
