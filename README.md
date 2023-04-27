@@ -31,5 +31,5 @@ This repository consists of files required for end to end implementation and dep
 
 * GridSearchCV
 
-[Copyright (c) 2022 Kritik Agarwal](https://github.com/Kritik007/Airline-Fare-Prediction/blob/8ce82e4fec395c4acfc942d18471b7fe89b6bf8d/LICENSE#L3)
+[Copyright (c) 2022-23 Kritik Agarwal](https://github.com/Kritik007/Airline-Fare-Prediction/blob/8ce82e4fec395c4acfc942d18471b7fe89b6bf8d/LICENSE#L3)
 
